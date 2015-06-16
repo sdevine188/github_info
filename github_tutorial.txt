@@ -1,0 +1,86 @@
+go to code in file browser
+right click on code, select git bash
+
+if first time pushing code, type "git init"
+also need to go to github create new repo with name
+must link local git repo with cloud git repo
+to link the two type "git remote add origin typeurlhere" 
+url you want is the "clone url" on bottom right of main repo page on github
+
+enter "git add filenamehere"
+[repeat "git add filenamehere2" as needed]
+"git commit -m "description of push here"
+"git push origin master"
+
+Stephen Devine <sdevine188@gmail.com>
+10/7/14
+
+to me 
+if you need to re-clone a remote github repo because you accidentally did git init command in working directory, first "hide" your working files in a new folder, then cd to folder to be cloned to github repo, type "git clone typegithubrepourlhere" (from bottom right of github repo main page
+
+the reason to separate working files from folder to be cloned is that once cloned, all the remote github files will create messy nesting of repos ??
+
+then just git add as normal right
+
+
+Stephen Devine <sdevine188@gmail.com>
+11/16/14
+
+to me 
+if you have code in folder, go to code and right click, then open git bash
+then type "git status" to see that code is ready to be pushed
+
+
+Stephen Devine <sdevine188@gmail.com>
+11/16/14
+
+to me 
+if repo already exits because you forked it or previously created it, don't do git init!
+just do git clone typeurlhere
+then do the normal git add procedures
+
+
+Stephen Devine <sdevine188@gmail.com>
+12/23/14
+
+to me 
+http://www.typecastexception.com/post/2012/09/08/Basic-Git-Command-Line-Reference-for-Windows-Users.aspx#BASH-NAVIGATE-FILE-SYSTEM
+
+
+Stephen Devine <sdevine188@gmail.com>
+Jan 10
+
+to me 
+to see what git repository a folder is linked to, type "git remote show origin" when in that folder directory in git bash
+
+
+Stephen Devine <sdevine188@gmail.com>
+Feb 21
+
+to me 
+if you have a lot of files in many sub-folders to add, one way is to create a "stuff" folder in the immediate folder where the github master repo is located, then copy all the files to be added into that, then go to gitbash and type "git add stuff" 
+
+
+Stephen Devine <sdevine188@gmail.com>
+Feb 28
+
+to me 
+to remove a file from github, first cut/paste it out of the desktop folder it currently resides in... then go to git bash and type "git rm filenamehere", then the usual "git commit -m "description of push here" and "git push origin master"... this should remove it from github
+
+
+Stephen Devine <sdevine188@gmail.com>
+Mar 8
+
+to me 
+to add everything in a folder, you can more easily just "git add foldername"
+
+
+Stephen Devine <sdevine188@gmail.com>
+Mar 29
+
+to me 
+updated guidance: if you create a new repo on github, go to the local folder you want to sync with the repo in git bash, type "git init", then "git remote add origin typeurlhere".  then do git add as usual.
+
+only clone if there are already files in repo, like if you forked someone else's repo.  then do "git clone typeurlhere".  
+
+basically, git will only let you push files if you're local timeline is synced with the remote repo timeline.  this is automatically the case if you just created a remote repo and do git init to push to it.  but if it's a forked repo, then there is a pre-existing timeline outside of any local repo on your desktop.  so you can't do git init locally and push to this remote repo with a pre-existing timeline.  you need to clone the remote repo (and its timeline) first.
